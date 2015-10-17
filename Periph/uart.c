@@ -6,7 +6,7 @@
 * Date:         12AUG2015
 * *******************************************************************/
 /*Includes **********************************************************/
-#include "Uart.h"
+#include "uart.h"
 #include <unistd.h>			//Used for UART
 #include <fcntl.h>			//Used for UART
 #include <termios.h>		   //Used for UART
@@ -89,8 +89,8 @@ unsigned int ReadUart(int devFilePtr, unsigned char *rxBuffer){
 
 	   //Bytes received
 	   rxBuffer[tempRxLen] = '\0';
-	   rxLen = tempRxLen;
-	   printf("%i bytes read : %s\n", tempRxLen, rxBuffer);
+	   //`rxLen = tempRxLen;
+	   //printf("%i bytes read : %s\n", tempRxLen, rxBuffer);
 	}
 	
 	return tempRxLen;

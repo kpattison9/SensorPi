@@ -25,20 +25,19 @@ all: $(TARGET)
 # To create the executable file count we need the object files
 # countwords.o, counter.o, and scanner.o:
 #
-SensorPi:  main.o Uart.o 
-	$(CC) $(CFLAGS) -o SensorPi main.o Uart.o 
+SensorPi:  uart.o 
+	$(CC) $(CFLAGS) -o SensorPi main.c uart.o 
 
 # To create the object file countwords.o, we need the source
 # files countwords.c, scanner.h, and counter.h:
 #
-main.o:  main.c /Periph/uart.h
-	$(CC) $(CFLAGS) -c main.c
+
 
 # To create the object file counter.o, we need the source files
 # counter.c and counter.h:
 #
-Uart.o:  /Periph/uart.c /Periph/uart.h 
-	$(CC) $(CFLAGS) -c /Periph/uart.c
+uart.o: ../Periph/uart.c ../Periph/uart.h 
+	$(CC) $(CFLAGS) -c ../Periph/uart.c
 
 
 # To start over from scratch, type 'make clean'.  This
