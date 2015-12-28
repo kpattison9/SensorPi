@@ -6,12 +6,15 @@
 * Author:       K. Pattison
 * Date:         24JAN2015
 * *******************************************************************/
+#ifndef _NMEABUILDER_H_
+#define _NMEABUILDER_H_
+
 /* Includes *********************************************************/
 
 
 /* Defines **********************************************************/
 typedef struct {
-	NmeaTalker_e talkerId;	
+	char *talkerId;	
 	char *payload;
 	int	payloadLen;
 	bool checksumValid;
@@ -28,3 +31,4 @@ typedef enum {
 /* Function Prototypes **********************************************/
 NmeaSentence_s NmeaBuilder(char *inBuff, int inLen);
 
+#endif

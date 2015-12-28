@@ -1,19 +1,21 @@
 /********************************************************************
-* Uart.c
+* GpsProc.h
 * Description:  This file contains the functions necessary to 
                 initialize, read and write the Pi's UART port.
 * Author:       K. Pattison
-* Date:         16OCT2015
+* Date:         28DEC2015
 * *******************************************************************/
 
-#ifndef _UART_H_
-#define _UART_H_
+#ifndef _GPSPROC_H_
+#define _GPSPROC_H_
+/* Includes *********************************************************/
 
 
-int InitUart();
+/* Defines **********************************************************/
 
-unsigned int ReadUart(int devFilePtr, unsigned char *rxBuffer);
-void CloseUart(int devFilePtr);
+
+/* Function Prototypes **********************************************/
+
 
 
 
