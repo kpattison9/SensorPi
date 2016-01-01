@@ -134,7 +134,7 @@ bool ValidateNmeaChecksum(char *inBuff, int inLen, char checksumA, char checksum
 	/*Do the cheap ascii to int conversion */
 	int rxChecksum = 10 * (checksumA - ASCII_CONV) + (checksumB - ASCII_CONV);
 	int calcChecksum = 0;
-	bool retVal;
+	boolean retVal;
 
 	/*Calculate the Recieved Checksum*/
 	for (int idx = 0; idx < inLen; idx++){
