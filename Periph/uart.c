@@ -7,6 +7,7 @@
 * *******************************************************************/
 /*Includes **********************************************************/
 #include "uart.h"
+#include <stdio.h>
 #include <unistd.h>			//Used for UART
 #include <fcntl.h>			//Used for UART
 #include <termios.h>		   //Used for UART
